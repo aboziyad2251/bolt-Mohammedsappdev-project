@@ -1,0 +1,48 @@
+:root {
+      --background: #fff8e1; /* Light yellow */
+      --text: #1a1a1a;
+      --category-bg: rgba(255, 248, 225, 0.9); /* Light yellow with transparency */
+      --item-bg: rgba(255, 248, 225, 0.95); /* Light yellow with more transparency */
+      --shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow intensity */
+      --hover-bg: rgba(0, 0, 0, 0.05);
+      --border: rgba(0, 0, 0, 0.1);
+      --icon: #4a5568;
+      --font-weight: 600; /* Bold text */
+    }
+
+    .dark {
+      --background: #1a202c;
+      --text: #f7fafc;
+      --category-bg: rgba(45, 55, 72, 0.9);
+      --item-bg: rgba(45, 55, 72, 0.95);
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --hover-bg: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.1);
+      --icon: #cbd5e0;
+      --font-weight: 400; /* Normal text in dark mode */
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: var(--font-weight); /* Apply bold text in light mode */
+    }
+
+    #root {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    @media (hover: hover) {
+      .nav li:hover {
+        transform: translateY(-5px);
+        background: var(--hover-bg);
+      }
+    }
